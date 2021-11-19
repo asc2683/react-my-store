@@ -1,0 +1,35 @@
+{
+  "restaurant": {
+    "name": "Mr. Magoo's Sandwich Shop",
+    "phone": "555-5555"
+  },
+  "menu": {
+    "items": [
+      {
+        "id": 1,
+        "name": "sandwich",
+        "price": 5
+      },
+      {
+        "id": 2,
+        "name": "chips",
+        "price": 1
+      },
+      {
+        "id": 3,
+        "name": "cake",
+        "price": 3
+      },
+      {
+        "id": 4,
+        "name": "soup",
+        "price": 4
+      },
+      {
+        "id": 5,
+        "name": "drink",
+        "price": 2
+      }
+    ]
+  }
+}
