@@ -8,12 +8,12 @@ const ShopItem = ({ item, menuVisible }) => {
     <ul className="shop-item" key={item.id} data-testid="shopItem">
       <li style={{ color: item.color }} key={`name_${item.id}`}>Item: {item.name}</li>
       <li key={`price_${item.id}`}>Price: ${item.price}</li>
-      {!menuVisible && (
+      {!menuVisible ?
         <>
           <li key={`quantity_${item.id}`}>Quantity: {item.quantity}</li>
           <li key={`total_${item.id}`}>Item total: ${itemTotal}</li>
         </>
-      )}
+      : null}
     </ul>
   )
 }
