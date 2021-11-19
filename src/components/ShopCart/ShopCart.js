@@ -5,9 +5,9 @@ import './ShopCart.css';
 const ShopCart = ({ cart, total }) => {
   return (
     <>
-      {!total && (
+      {!total ? 
         <p>Nothing in order</p>
-      )}
+      : null }
       <>
         {cart.map((item) => {
           return (

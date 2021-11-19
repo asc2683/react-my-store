@@ -70,19 +70,19 @@ export default function App() {
         />
       </div>
       <main>
-      {menuVisible && (
+      {menuVisible ? 
         <MenuList
           menu={menu} 
           addToCart={addToCart}
           menuVisible={menuVisible}
         />
-      )}
-      {cartVisible && (
+      : null }
+      {cartVisible ? 
         <ShopCart 
           cart={cart}
           total={total}
         />
-      )}
+      : null }
       </main>
       <div>
         <Button 
