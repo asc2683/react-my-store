@@ -6,6 +6,6 @@ const Header = ({ detail }) => (
     <h1>{detail.name}</h1>
     <h2>{detail.phone}</h2>
   </div>
-)
+);
 
 export default Header;

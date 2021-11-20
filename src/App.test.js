@@ -9,7 +9,7 @@ test('renders menu header', () => {
   expect(headerElement).toBeInTheDocument();
 });
 
-test("view order", () => {
+test('view order', () => {
     render(<App />);
     const button = screen.getByText(/View Order/i);
     fireEvent.click(button);
@@ -17,22 +17,22 @@ test("view order", () => {
     expect(orderTitle).toBeInTheDocument();
 });
 
-test("add to cart", () => {
+test('add to cart', () => {
     render(<App />);
     const addButton = screen.getAllByText('Add to Order')[0];
     fireEvent.click(addButton);
     const button = screen.getByText(/View Order/i);
     fireEvent.click(button);
-    const quantity = screen.getByText(/Quantity: 1/i);
+    const quantity = screen.getByText(/Quantity:1/i);
     expect(quantity).toBeInTheDocument();
 });
 
-test("submit order", async () => {
+test('submit order', async () => {
     const total = 0;
     window.alert = jest.fn();
     render(<App />);
     const button = screen.getByText(/Submit Order/i);
     fireEvent.click(button);
-    expect(window.alert).toBeCalledWith('Order Submitted: $' + total);
+    expect(window.alert).toBeCalledWith(`Order Submitted: $${total}`);
     window.alert.mockClear();
 });
