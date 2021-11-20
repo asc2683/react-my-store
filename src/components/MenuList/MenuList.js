@@ -12,10 +12,10 @@ const MenuList = ({ menu, addToCart, menuVisible }) => (
             item={item}
             menuVisible={menuVisible}
           />
-          <Button 
-            item={item} 
-            label="Add to Order" 
-            handleClick={addToCart} 
+          <Button
+            item={item}
+            label="Add to Order"
+            handleClick={addToCart}
           />
         </div>
       );

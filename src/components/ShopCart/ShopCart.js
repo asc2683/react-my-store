@@ -5,9 +5,9 @@ import './ShopCart.css';
 const ShopCart = ({ cart, total }) => {
   return (
     <>
-      {!total ? 
-        <p>Nothing in order</p>
-      : null }
+      { !total
+        ? <p>Nothing in order</p>
+        : null }
       <>
         {cart.map((item) => {
           return (
@@ -17,9 +17,12 @@ const ShopCart = ({ cart, total }) => {
           );
         })}
       </>
-      <p>Total: ${total}</p>
+      <p>
+        Total: $
+        {total}
+      </p>
     </>
   );
-}
+};
 
 export default ShopCart;
