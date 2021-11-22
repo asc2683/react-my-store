@@ -1,5 +1,5 @@
 import { render, screen, cleanup } from '@testing-library/react';
-import Header from './Header';
+import Shop from './Shop';
 import { DataProvider } from '../../contexts/DataContext';
 
 afterEach(cleanup);
@@ -11,12 +11,10 @@ test('should render Header component with menu title', () => {
   };
 
   render(
-    <DataProvider detail={detail}>
-      <Header />
+    <DataProvider>
+      <Shop />
     </DataProvider>,
   );
-  const headerElement = screen.getByTestId('header');
+  const headerElement = screen.getByTestId('shop');
   expect(headerElement).toBeInTheDocument();
-  expect(headerElement).toHaveTextContent(detail.name);
-  expect(headerElement).toHaveTextContent(detail.phone);
 });

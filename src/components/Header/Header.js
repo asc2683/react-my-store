@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../../contexts/DataContext';
 import './Header.css';
 
-const Header = ({ detail }) => (
-  <div className="header" data-testid="header">
-    <h1>{detail.name}</h1>
-    <h2>{detail.phone}</h2>
-  </div>
-);
+const Header = () => {
+  const { detail, menuVisible } = useContext(DataContext);
+  const header = menuVisible ? detail : { ...detail, name: 'My Order', phone: '' };
+
+  return (
+    <header className="header">
+      <div data-testid="header">
+        <h1>{header.name}</h1>
+        <h2>{header.phone}</h2>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

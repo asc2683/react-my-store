@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../../contexts/DataContext';
 import ShopItem from '../ShopItem/ShopItem';
 import './ShopCart.css';
 
-const ShopCart = ({ cart, total }) => {
+const ShopCart = () => {
+  const { cart, total } = useContext(DataContext);
+
   return (
     <>
       { !total
