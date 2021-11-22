@@ -1,5 +1,6 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import MenuList from './MenuList';
+import { DataProvider } from '../../contexts/DataContext';
 
 afterEach(cleanup);
 
@@ -35,7 +36,12 @@ test('should render MenuList component', () => {
   const menuVisible = true;
   const mockAddToCart = jest.fn();
 
-  render(<MenuList menu={menu} menuVisible={menuVisible} addToCart={mockAddToCart} />);
+  render(
+    <DataProvider menu={menu} menuVisible={menuVisible} addToCart={mockAddToCart}>
+      <MenuList />
+    </DataProvider>,
+  );
+
   const chips = screen.getByText(/Chips/i);
   const quantity = screen.queryAllByText('Quantity');
   expect(chips).toBeInTheDocument();

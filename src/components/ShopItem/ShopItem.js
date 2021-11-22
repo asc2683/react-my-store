@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../../contexts/DataContext';
 import './ShopItem.css';
 
 import { calcItemTotal } from '../../utils';
 
-const ShopItem = ({ item, menuVisible }) => {
+const ShopItem = ({ item }) => {
+  const { menuVisible } = useContext(DataContext);
+
   return (
     <ul
       className="shop-item"
