@@ -11,9 +11,7 @@ const MenuList = () => {
   console.log('addToCard: ', addToCart);
   console.log('menuVisible: ', menuVisible);
 
-  /*
-      Todo: Need to show all items from menu dynamically...
-  */
+  // Todo: Need to show all items from menu programmatically...
 
   return (
     <>

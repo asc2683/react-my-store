@@ -8,7 +8,7 @@ import './Shop.css';
 const Shop = () => {
   const { menuVisible, submitOrder, toggleView } = useContext(DataContext);
 
-  // Todo: Show total orders in card programmatically...
+  // Todo: Show total orders in cart programmatically...
 
   return (
     <main className="shop-container" data-testid="shop">
