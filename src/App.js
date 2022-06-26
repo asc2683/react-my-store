@@ -5,7 +5,6 @@ import { DataProvider } from './contexts/DataContext';
 
 const App = () => (
   <DataProvider>
-    <h1>Question/1.0</h1>
     <Header />
     <Shop />
   </DataProvider>

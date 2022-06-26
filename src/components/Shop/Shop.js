@@ -8,11 +8,13 @@ import './Shop.css';
 const Shop = () => {
   const { menuVisible, submitOrder, toggleView } = useContext(DataContext);
 
+  // Todo: Show total orders in card programmatically...
+
   return (
     <main className="shop-container" data-testid="shop">
       <div>
         <Button
-          label={menuVisible ? 'View Order' : 'Return to menu'}
+          label={menuVisible ? 'View Order (0)' : 'Return to menu'}
           handleClick={toggleView}
         />
       </div>
